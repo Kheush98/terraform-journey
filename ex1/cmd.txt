@@ -1,0 +1,7 @@
+4  terraform fmt
+5  terraform validate
+6  terraform init
+7  clear
+8  terraform plan
+9  terrform apply
+10 terraform apply
