@@ -25,12 +25,17 @@ resource "aws_instance" "web" {
   provisioner "remote-exec" {
     inline = ["chmod +x /tmp/web.sh", "sudo /tmp/web.sh"]
   }
+
+  provisioner "local-exec" {
+    command = "echo ${self.private_ip} >> private_ip.txt" #Save instance private's ip in private_ip.txt file in local
+  }
 }
 
 resource "aws_ec2_instance_state" "web-state" {
   instance_id = aws_instance.web.id
   state       = "running"
 }
+
 
 output "public_ip" {
   description = "Instance Public ip"
