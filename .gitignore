@@ -1,1 +1,6 @@
 */.terraform
+*/dove
+*/dove.pub
+*/terraform.tfstate
+*/terraform.tfstate.backup
+*/*.tfvars

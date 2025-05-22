@@ -14,6 +14,14 @@ variable "AMI_ID" {
   }
 }
 
+variable "USER" {
+  default = "ubuntu"
+}
+
 variable "INST_TYPE" {
   default = "t2.micro"
+}
+
+variable "instance_public_key" {
+  type = string
 }
